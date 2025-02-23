@@ -3,6 +3,7 @@ package com.example.learningandexperimentingandroid
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.collection.LruCache
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.learningandexperimentingandroid.initblock.Mentor
@@ -17,7 +18,6 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val mentor = Mentor("vipin", "thakur", "technology")
 
     }
 }
