@@ -4,9 +4,9 @@ import kotlin.properties.Delegates
 
 fun main() {
     val delegationExample = DelegationExample()
-    /* delegationExample.m = 25
-     delegationExample.m = 52*/
-
+    delegationExample.m = 25
+    delegationExample.m = 52
+    println(delegationExample.l)
     delegationExample.n = 15
     println(delegationExample.n)
     delegationExample.n = 35
@@ -25,22 +25,22 @@ class DelegationExample() {
      * newValue 52
      */
     var m: Int by Delegates.observable(0) { _, oldValue, newValue ->
-        println("oldValue $oldValue")
-        println("newValue $newValue")
+        println("oldValue observable  $oldValue")
+        println("newValue observable $newValue")
     }
 
     /**
      * It simply check the predicate if it matches than it changes the value otherwise not
-       oldValue 12
-       newValue 15
-       12
-       oldValue 12
-      newValue 35
-      35
+    oldValue 12
+    newValue 15
+    12
+    oldValue 12
+    newValue 35
+    35
      */
     var n: Int by Delegates.vetoable(12) { _, oldValue, newValue ->
-        println("oldValue $oldValue")
-        println("newValue $newValue")
+        println("oldValue vetoable $oldValue")
+        println("newValue vetoable $newValue")
         newValue > 30
 
     }
