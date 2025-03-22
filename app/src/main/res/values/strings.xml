@@ -6,4 +6,5 @@
     <string name="foreground_service">Foreground Service</string>
     <string name="dynamic_service">Dynamic Service</string>
     <string name="show_offer">Show Offer</string>
+    <string name="work_manager">Work Manager</string>
 </resources>
