@@ -12,6 +12,7 @@ import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import com.example.learningandexperimentingandroid.databinding.ActivityMainBinding
+import com.example.learningandexperimentingandroid.responsiveui.ResponsiveUiPracticeActivity
 import com.example.learningandexperimentingandroid.services.bg.BackGroundServiceExampleActivity
 import com.example.learningandexperimentingandroid.services.dynamicnotifications.DynamicNotificationActivity
 import com.example.learningandexperimentingandroid.services.fg.ForGroundServiceExampleActivity
@@ -55,6 +56,9 @@ class MainActivity : AppCompatActivity() {
                         this@MainActivity, DynamicNotificationActivity::class.java
                     )
                 )
+            }
+            btnResponsive.setOnClickListener {
+                startActivity(Intent(this@MainActivity, ResponsiveUiPracticeActivity::class.java))
             }
             btnWorkManager.setOnClickListener {
                 doWork()

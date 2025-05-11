@@ -17,6 +17,9 @@
         android:theme="@style/Theme.LearningAndExperimentingAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".responsiveui.ResponsiveUiPracticeActivity"
+            android:exported="false" />
+        <activity
             android:name=".services.dynamicnotifications.DynamicNotificationActivity"
             android:exported="false" />
 
